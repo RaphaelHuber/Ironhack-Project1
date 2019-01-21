@@ -21,7 +21,7 @@ function drawBoard() {
   const player = new Player();
   let x = 0;
   let y = (rows - 1) * resolution;
-  for (let i = 1; i <= columns * rows; i += 1) {
+  for (let i = 0; i <= columns * rows; i += 1) {
     const tile = new Tile(x, y, resolution, i);
     tiles.push(tile);
     x += resolution * directionIndex;
@@ -46,4 +46,3 @@ window.onload = function () {
     startGame();
   };
 };
-
