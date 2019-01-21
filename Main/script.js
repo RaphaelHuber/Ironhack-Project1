@@ -30,7 +30,8 @@ function drawBoard() {
       y -= resolution;
       directionIndex *= -1;
     }
-    tile.drawTileIndex();
+    tile.show();
+    tile.drawIndex();
   }
 }
 
@@ -39,7 +40,8 @@ console.log('hello', tiles);
 // start game function
 function startGame() {
   drawBoard();
-  drawTile();
+  // drawTile();
+  const player = new Player();
 }
 
 // OnClick function triggering the beginning of the game

@@ -10,62 +10,57 @@ const events = [
   { name: 'ironman', text: 'aquaman', event: 'go forward 3', img: 'ironman.jpg', colour: 'navy', index: 30 },
   { name: 'spiderman', text: 'aquaman', event: 'go forward 4', img: 'spiderman.jpg', colour: 'silver', index: 33 },
   { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: 36 },
-  { name: 'the avengers', text: 'aquaman', event: 'go forward 6', img: 'the-avengers.jpg', colour: 'lime', index: 38 }
-  // { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: '36' },
-  // { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: '36' },
-  // { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: '36' },
-  // { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: '36' },
-  // { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: '36' },
-  // { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: '36' },
-  // { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: '36' }
+  { name: 'the avengers', text: 'aquaman', event: 'go forward 6', img: 'the-avengers.jpg', colour: 'lime', index: 38 },
+  { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: 36 },
+  { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: 36 },
+  { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: 36 },
+  { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: 36 },
+  { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: 36 },
+  { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: 36 },
+  { name: 'superman', text: 'aquaman', event: 'go forward 5', img: 'superman.jpg', colour: 'olive', index: 36 }
 ];
 
-// Player constructor function
-function Player() {
-  this.spot = 0;
-}
-
 // Tile constructor function
-function Tile(x, y, resolution, tileIndex) {
+function Tile(x, y, resolution, index) {
   this.x = x;
   this.y = y;
   this.resolution = resolution;
-  this.tileIndex = tileIndex;
-}
-
-// New dray Tiles
-function drawTile() {
-  for (let i = 0; i < events.length; i += 1) {
-    for (let j = 0; j < tiles.length; j += 1) {  
-      console.log(tiles[j].tileIndex);
-      console.log(events[i].index);
-      if (tiles[j].tileIndex === events[i].index) {
-        console.log("hello");
-      } else console.log("fuck");
-    }
+  this.index = index;
+  if (this.index % 2 === 0) {
+    this.colour = '#E04C39';
+  } else {
+    this.colour = '#EF9E44';
   }
 }
 
+Tile.prototype.show = function () {
+  ctx.fillStyle = this.colour;
+  ctx.fillRect(this.x, this.y, this.resolution, this.resolution);
+};
 
-// draw tiles
-// Tile.prototype.drawTile = function () {
-//   for (let i = 0; i < events.length; i += 1) {
-//     console.log(tiles[i].tileIndex, events[i].index);
-//     if (tiles[i].tileIndex === parseInt(events[i].index)) {
-//       this.colour = events[i].colour;
-//     } else {
-//       this.colour = 'yellow';
-//     }
-//     ctx.fillStyle = this.colour;
-//     ctx.fillRect(this.x, this.y, this.resolution, this.resolution);
-//   }
-// };
-
-// function drawing showTileIndex
-Tile.prototype.drawTileIndex = function () {
+// function drawing show index
+Tile.prototype.drawIndex = function () {
   ctx.font = '20px Arial';
   ctx.textAlign = 'center';
   ctx.fillStyle = 'black';
-  ctx.fillText(this.tileIndex, this.x + this.resolution / 2, this.y + this.resolution / 2);
+  ctx.fillText(this.index, this.x + this.resolution / 6, this.y + this.resolution / 6);
 };
+
+// // function relating colour to index
+// function drawTile() {
+//   console.log(tiles);
+//   for (let i = 0; i < tiles.length; i += 1) {
+//     for (let j = 0; j < events.length; j += 1) {  
+//       console.log(tiles[i].index);
+//       console.log(events[j].index);
+//       if (tiles[i].index === events[j].index) {
+//         console.log('epic');
+//         console.log(events[j].colour);
+//         return ctx.fillStyle = events[j].colour;
+//       }
+//     }
+//     ctx.fillStyle = 'yellow';
+//     ctx.fillRect(tiles[i].x, tiles[i].y, tiles[i].resolution, tiles[i].resolution);
+//   }
+// }
 
