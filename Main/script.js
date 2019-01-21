@@ -22,27 +22,25 @@ function drawBoard() {
   let x = 0;
   let y = (rows - 1) * resolution;
   for (let i = 0; i < columns * rows; i += 1) {
-    const tile = new Tile(x, y, resolution, i + 1);
-    tile.drawTile();
+    const tile = new Tile(x, y, resolution, i);
     tiles.push(tile);
     x += resolution * directionIndex;
-    if (x > canvas.width || x < 0) {
-      x += 0;
+    if (x >= canvas.width || x < 0) {
+      x -= resolution * directionIndex;
       y -= resolution;
       directionIndex *= -1;
     }
+    tile.showTileIndex();
+    tile.drawTile();
   }
 }
+
+// prblem is that x goes further than 300
 
 // start game function
 function startGame() {
   drawBoard();
-  console.log(randomeColour());
 }
-
-// function drawRect(x, y, w, h) {
-//   ctx.fillRect(x, y, w, h);
-// }
 
 // OnClick function triggering the beginning of the game
 window.onload = function () {
