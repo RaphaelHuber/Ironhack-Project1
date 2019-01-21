@@ -32,9 +32,9 @@ Tile.prototype.drawTile = function () {
 };
 
 // function drawing showTileIndex
-Tile.prototype.showTileIndex = function () {
+Tile.prototype.drawTileIndex = function () {
   ctx.font = '20px Arial';
-  ctx.fillStyle = 'black';
   ctx.textAlign = 'center';
-  ctx.fillText(this.tileIndex, this.x - resolution / 2, this.y - resolution / 2);
+  ctx.fillStyle = 'black';
+  ctx.fillText(this.tileIndex, this.x + this.resolution / 2, this.y + this.resolution / 2);
 }
