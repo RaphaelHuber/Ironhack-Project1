@@ -25,19 +25,21 @@ function drawBoard() {
     const tile = new Tile(x, y, resolution, i);
     tiles.push(tile);
     x += resolution * directionIndex;
-    if (x >= canvas.width || x < 0) {
+    if ((x >= canvas.width || x < 0) && y > 0) {
       x -= resolution * directionIndex;
       y -= resolution;
       directionIndex *= -1;
     }
-    tile.drawTile();
     tile.drawTileIndex();
   }
 }
 
+console.log('hello', tiles);
+
 // start game function
 function startGame() {
   drawBoard();
+  drawTile();
 }
 
 // OnClick function triggering the beginning of the game
