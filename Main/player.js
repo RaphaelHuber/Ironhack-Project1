@@ -18,7 +18,7 @@ Player.prototype.move = function (num) {
 Player.prototype.display = function () {
   ctx.beginPath();
   ctx.fillStyle = 'black';
-  ctx.arc(this.spot, this.spot, 10, 0, 2 * Math.PI);
+  ctx.arc(tiles[this.spot].x + (resolution / 2), tiles[this.spot].y + (resolution / 2), 10, 0, 2 * Math.PI);
   ctx.fill();
   ctx.stroke();
 };
