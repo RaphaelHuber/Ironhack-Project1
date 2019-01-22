@@ -6,21 +6,23 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <title>Harold & Kumar</title>
   <style>
   </style>
 </head>
-<body id="container">
-  <div class="game-intro">
-    <input type="button" value="Start this schnizzle" id="start-button">
+<body id="container1">
+  <div class="game-intro container2">
+    <input type="button" id="start-button" class="btn btn-primary btn-lg" value="Start Button">
+    <div id="event-text">Lorem ipsum dolor sit amet, saepe accusam nec ne. Sed nullam saperet appetere ut, ut nam etiam nostrud. Eu vel augue nostrud nonumes, an eam nobis probatus. Sit aliquid albucius id, quo ubique albucius incorrupte ea, sit natum splendide argumentum ex. At dolorum perpetua cum, id mea quod affert dolorem.</div>
   </div>
   <div id="game-board">
-    <canvas id="my-canvas" width="800" height="500">
-    </canvas>
+    <canvas id="my-canvas" width="800" height="500"></canvas>
   </div>
 </body>
 <script type="text/javascript" src="board.js"></script>
 <script type="text/javascript" src="script.js"></script>
 <script type="text/javascript" src="player.js"></script>
 <script type="text/javascript" src="canvas.js"></script>
+<script type="text/javascript" src="DOM.js"></script>
 </html>

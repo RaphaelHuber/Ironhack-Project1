@@ -37,11 +37,6 @@ function drawBoard() {
   }
 }
 
-// function to toggle the button
-function toggleBtn() {
-  document.getElementById('start-button').value = 'Roll the dice';
-}
-
 // start game function
 function startGame() {
   drawBoard();
@@ -66,11 +61,11 @@ window.onload = function () {
   document.getElementById('start-button').onclick = function () {
     timesClicked += 1;
     if (timesClicked <= 1) {
-      setTimeout(startGame, 500);
+      startGame();
       toggleBtn();
     }
     if (timesClicked > 1) {
-      setTimeout(rollDice, 500);
+      setTimeout(rollDice, 200);
     }
   };
 };
