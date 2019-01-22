@@ -56,6 +56,8 @@ function rollDice() {
   const num = Math.floor(Math.random() * 6) + 1;
   console.log('You diced a ' + num);
   player.move(num);
+  player.display();
+  console.log(tiles);
 }
 
 // OnClick function triggering the beginning of the game
