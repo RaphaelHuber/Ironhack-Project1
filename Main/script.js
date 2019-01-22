@@ -21,7 +21,6 @@ const rows = canvas.height / resolution;
 
 // Function that draws the Board
 function drawBoard() {
-  player = new Player();
   let x = 0;
   let y = (rows - 1) * resolution;
   for (let i = 0; i <= columns * rows; i += 1) {
@@ -46,7 +45,8 @@ function toggleBtn() {
 // start game function
 function startGame() {
   drawBoard();
-  const player = new Player();
+  console.log(tiles);
+  player = new Player();
 }
 
 // roll dice function
@@ -54,21 +54,23 @@ function rollDice() {
   const num = Math.floor(Math.random() * 6) + 1;
   console.log('You diced a ' + num);
   player.move(num);
-  player.display();
+  player.displayPlayer();
   player.trigger();
-  player.display();
+  clearCanvas();
+  drawBoard();
+  player.displayPlayer();
 }
 
-// OnClick function triggering the beginning of the game
+// OnClick triggering the beginning of the game
 window.onload = function () {
   document.getElementById('start-button').onclick = function () {
     timesClicked += 1;
     if (timesClicked <= 1) {
-      startGame();
+      setTimeout(startGame, 500);
       toggleBtn();
     }
     if (timesClicked > 1) {
-      rollDice();
+      setTimeout(rollDice, 500);
     }
   };
 };

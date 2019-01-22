@@ -5,8 +5,8 @@ function Player() {
 
 // player move function
 Player.prototype.move = function (num) {
-  if (this.spot + num >= tiles.length - 1) {
-    this.spot = tiles.length - 1
+  if (this.spot + num > columns * rows) {
+    this.spot = (columns * rows) - 1
     alert('You have made it');
   } else {
     this.spot += num;
@@ -15,7 +15,7 @@ Player.prototype.move = function (num) {
 };
 
 // display player
-Player.prototype.display = function () {
+Player.prototype.displayPlayer = function () {
   ctx.beginPath();
   ctx.fillStyle = '#F38630';
   ctx.arc(tiles[this.spot].x + (resolution / 2), tiles[this.spot].y + (resolution / 2), 10, 0, 2 * Math.PI);
@@ -29,13 +29,8 @@ Player.prototype.display = function () {
 Player.prototype.trigger = function () {
   for (let i = 0; i < events.length; i += 1) {  
     if (tiles[this.spot].index === events[i].index) {
-      console.log(events[i].text);
+      console.log(events[i].event);
       this.spot += events[i].event;
     }
   }
 };
-
-// erases the displayed player after rolling the dice again
-Player.prototype.erase = function () {
-
-}
