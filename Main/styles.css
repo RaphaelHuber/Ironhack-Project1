@@ -6,7 +6,9 @@ canvas {
 
 #start-button {
   width: 200px;
-  margin: 0 0 0 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container1 {
@@ -27,4 +29,14 @@ canvas {
 #event-text {
  width: 400px;
  padding: 50px 0;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

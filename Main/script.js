@@ -13,6 +13,9 @@ let player;
 // Defining times clicked
 let timesClicked = 0;
 
+// Defining number of throws
+let numberOfThrows = 0;
+
 // Defining canvas properties
 const resolution = 100;
 let directionIndex = 1;
@@ -40,7 +43,6 @@ function drawBoard() {
 // start game function
 function startGame() {
   drawBoard();
-  console.log(tiles);
   player = new Player();
 }
 
@@ -48,6 +50,8 @@ function startGame() {
 function rollDice() {
   const num = Math.floor(Math.random() * 6) + 1;
   console.log('You diced a ' + num);
+  numberOfThrows += 1;
+  console.log(numberOfThrows);
   player.move(num);
   player.displayPlayer();
   player.trigger();

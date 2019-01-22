@@ -29,8 +29,8 @@ Player.prototype.displayPlayer = function () {
 Player.prototype.trigger = function () {
   for (let i = 0; i < events.length; i += 1) {  
     if (tiles[this.spot].index === events[i].index) {
-      console.log(events[i].event);
       changeText(events[i].text);
+      changeSrc(events[i].img)
       this.spot += events[i].event;
     }
   }
