@@ -1,8 +1,8 @@
 // Tile events
 const events = [
-  { name: 'event1', text: 'Lorem ipsum dolor sit amet, alii esse te vis. Nam eu nobis constituam, dicat ornatus in eos. Electram voluptaria instructior mea an. Sed id audire minimum repudiare. Pro evertitur vituperata ei, ea affert timeam aliquam mel. Est te soluta aliquid, detracto apeirian id nec. No novum aliquam his, suas dissentias.', event: -1, img: '../Main/images/you-made-it.jpg', colour: 'red', index: 2 },
-  { name: 'event2', text: 'Lorem ipsum dolor sit amet, odio omnis movet est at, in cum justo propriae, prima sadipscing ea nec. Pro idque volutpat scripserit no. Duo in intellegat deseruisse, vivendo delicata duo eu, ad quo sumo facilisi. Mei unum laboramus ea, mei at sonet nemore suscipiantur. Aperiri aliquando at mea, summo aeque.', event: 1, img: '../Main/images/you-made-it.jpg', colour: 'blue', index: 4 },
-  { name: 'event3', text: 'Lorem ipsum dolor sit amet, exerci homero eum in, brute nihil deterruisset sit eu. Pri id aliquid deleniti perfecto, eu movet antiopam vix. Tale possit vis an. Pro persecuti suscipiantur interpretaris at. Choro melius at mei. An qui eius possit pertinacia, perfecto periculis cum et. Et has commune placerat vulputate.', event: -2, img: 'captain-america.jpg', colour: 'blue', index: 7 },
+  { name: 'event1', text: 'Lorem ipsum dolor sit amet, alii esse te vis. Nam eu nobis constituam, dicat ornatus in eos. Electram voluptaria instructior mea an. Sed id audire minimum repudiare. Pro evertitur vituperata ei, ea affert timeam aliquam mel. Est te soluta aliquid, detracto apeirian id nec. No novum aliquam his, suas dissentias.', event: -1, img: '../Main/images/image-event1.png', colour: 'red', index: 2 },
+  { name: 'event2', text: 'Lorem ipsum dolor sit amet, odio omnis movet est at, in cum justo propriae, prima sadipscing ea nec. Pro idque volutpat scripserit no. Duo in intellegat deseruisse, vivendo delicata duo eu, ad quo sumo facilisi. Mei unum laboramus ea, mei at sonet nemore suscipiantur. Aperiri aliquando at mea, summo aeque.', event: 1, img: '../Main/images/image-event1.png', colour: 'blue', index: 4 },
+  { name: 'event3', text: 'Lorem ipsum dolor sit amet, exerci homero eum in, brute nihil deterruisset sit eu. Pri id aliquid deleniti perfecto, eu movet antiopam vix. Tale possit vis an. Pro persecuti suscipiantur interpretaris at. Choro melius at mei. An qui eius possit pertinacia, perfecto periculis cum et. Et has commune placerat vulputate.', event: -2, img: '../Main/images/image-event1.png', colour: 'blue', index: 7 },
   { name: 'event4', text: 'Lorem ipsum dolor sit amet, alii civibus interpretaris vim ne, ceteros omnesque ius cu. Mundi delectus percipit ut mea, at sumo ipsum assum pro, est paulo numquam et? Cu duo paulo conceptam voluptaria, ex diam eros comprehensam mea. No elitr verterem has, qui prima autem mundi ad? Pro te populo.', event: 2, img: 'fantastic-four.jpg', colour: 'white', index: 10 },
   { name: 'event5', text: 'Lorem ipsum dolor sit amet, reque oblique necessitatibus an sed, cu sale posidonium usu! Labitur fastidii senserit id quo, per ea paulo audire partiendo? His suas idque et. Veri mundi et per, per facer viderer saperet ne. Ut ius tibique volutpat, nam magna autem iuvaret ad. Viris interesset vis ut.', event: -3, img: 'flash.jpg', colour: 'grey', index: 17 },
   { name: 'event6', text: 'Lorem ipsum dolor sit amet, ea sit quando partiendo, regione nominavi mandamus sit ad. Maiorum legendos has ei! Cu quo paulo postulant assueverit? No mei nostrum scriptorem. At prodesset dissentias vix, pro an unum persius, sale aliquip eu pri. Nulla splendide cu usu, pri graeco accommodare signiferumque no. Ea sonet.', event: 3, img: 'green-arrow.jpg', colour: 'green', index: 20 },
@@ -19,12 +19,6 @@ function Tile(x, y, resolution, index) {
   this.y = y;
   this.resolution = resolution;
   this.index = index;
-  // for (let i = 0; i < events.length; i += 1) {  
-  //   if (this.index === events[i].index) {
-  //     this.colour = events[i].colour;
-  //   } else {
-  //     this.colour = 'yellow';
-  //   }
   if (this.index % 2 === 0) {
     this.colour = '#5BB531';
   } else {
@@ -32,15 +26,25 @@ function Tile(x, y, resolution, index) {
   }
 }
 
+// possibility to make the colour dependent from colour in events
+// for (let i = 0; i < events.length; i += 1) {  
+//   if (this.index === events[i].index) {
+//     this.colour = events[i].colour;
+//   } else {
+//     this.colour = 'yellow';
+//   }
+
 Tile.prototype.show = function () {
   ctx.fillStyle = this.colour;
   ctx.fillRect(this.x, this.y, this.resolution, this.resolution);
 };
 
 // function drawing show index
-Tile.prototype.drawIndex = function () {
-  ctx.font = '20px Arial';
+Tile.prototype.drawIndex = function () {  
+  ctx.font = '14px Arial';
   ctx.textAlign = 'center';
   ctx.fillStyle = 'black';
   ctx.fillText(this.index, this.x + this.resolution / 6, this.y + this.resolution / 6);
 };
+
+// possible thing, make font size related to resolution (resolution/5 e.g.)

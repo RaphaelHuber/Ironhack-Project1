@@ -44,6 +44,7 @@ function drawBoard() {
 function startGame() {
   drawBoard();
   player = new Player();
+  player.displayPlayer();
 }
 
 // roll dice function
