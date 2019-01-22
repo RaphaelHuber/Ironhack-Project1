@@ -4,6 +4,7 @@ function Player() {
 }
 
 Player.prototype.rollDice = function () {
-  let num = Math.floor(Math.random() * 6) + 1;
+  const num = Math.floor(Math.random() * 6) + 1;
+  console.log(num);
   this.spot += num;
 };

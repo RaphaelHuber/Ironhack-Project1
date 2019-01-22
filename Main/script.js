@@ -7,6 +7,9 @@ const ctx = canvas.getContext('2d');
 // Defining an array to store our tiles
 const tiles = [];
 
+// Defining times clicked
+let timesClicked = 0;
+
 // Defining canvas properties
 const resolution = 100;
 let directionIndex = 1;
@@ -35,7 +38,10 @@ function drawBoard() {
   }
 }
 
-console.log('hello', tiles);
+// function to toggle the button
+function toggleBtn() {
+  document.getElementById('start-button').value = 'Roll the dice';
+}
 
 // start game function
 function startGame() {
@@ -48,5 +54,10 @@ function startGame() {
 window.onload = function () {
   document.getElementById('start-button').onclick = function () {
     startGame();
+    toggleBtn();
+    timesClicked += 1;
+    if (timesClicked > 1) {
+      player.rollDice();
+    }
   };
 };
