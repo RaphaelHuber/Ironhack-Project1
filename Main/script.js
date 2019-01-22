@@ -7,6 +7,9 @@ const ctx = canvas.getContext('2d');
 // Defining an array to store our tiles
 const tiles = [];
 
+// defining player
+let player;
+
 // Defining times clicked
 let timesClicked = 0;
 
@@ -16,12 +19,11 @@ let directionIndex = 1;
 const columns = canvas.width / resolution;
 const rows = canvas.height / resolution;
 
-// Defining the player
-let player;
+
 
 // Function that draws the Board
 function drawBoard() {
-  const player = new Player();
+  player = new Player();
   let x = 0;
   let y = (rows - 1) * resolution;
   for (let i = 0; i <= columns * rows; i += 1) {
@@ -46,18 +48,26 @@ function toggleBtn() {
 // start game function
 function startGame() {
   drawBoard();
-  // drawTile();
   const player = new Player();
+}
+
+// roll dice function
+function rollDice() {
+  const num = Math.floor(Math.random() * 6) + 1;
+  console.log('You diced a ' + num);
+  player.move(num);
 }
 
 // OnClick function triggering the beginning of the game
 window.onload = function () {
   document.getElementById('start-button').onclick = function () {
-    startGame();
-    toggleBtn();
     timesClicked += 1;
+    if (timesClicked <= 1) {
+      startGame();
+      toggleBtn();
+    }
     if (timesClicked > 1) {
-      player.rollDice();
+      rollDice();
     }
   };
 };
