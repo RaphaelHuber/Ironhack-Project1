@@ -19,8 +19,6 @@ let directionIndex = 1;
 const columns = canvas.width / resolution;
 const rows = canvas.height / resolution;
 
-
-
 // Function that draws the Board
 function drawBoard() {
   player = new Player();
@@ -57,7 +55,8 @@ function rollDice() {
   console.log('You diced a ' + num);
   player.move(num);
   player.display();
-  console.log(tiles);
+  player.trigger();
+  player.display();
 }
 
 // OnClick function triggering the beginning of the game
