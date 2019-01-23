@@ -6,8 +6,8 @@ function Player() {
 // player move function
 Player.prototype.move = function (num) {
   if (this.spot + num > columns * rows) {
-    this.spot = (columns * rows) - 1
     alert('You have made it');
+    this.spot = 0;
   } else {
     this.spot += num;
   }
@@ -29,7 +29,7 @@ Player.prototype.displayPlayer = function () {
 Player.prototype.trigger = function () {
   for (let i = 0; i < events.length; i += 1) {  
     if (tiles[this.spot].index === events[i].index) {
-      changeText(events[i].text);
+      changeText('#event-text', events[i].text);
       changeSrc(events[i].img)
       this.spot += events[i].event;
     }

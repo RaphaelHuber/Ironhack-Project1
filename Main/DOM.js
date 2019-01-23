@@ -3,8 +3,8 @@ function toggleBtn() {
   document.getElementById('start-button').value = 'Roll them dice';
 }
 
-function changeText(item) {
-  $('#event-text').text(item);
+function changeText(item, text) {
+  $(item).text(text);
 }
 
 function changeSrc(item) {
