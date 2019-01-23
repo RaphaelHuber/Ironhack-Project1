@@ -4,9 +4,9 @@ function toggleBtn(item) {
 }
 
 function changeText(item, text) {
-  $(item).text(text);
+  $(item).html(text);
 }
 
-function changeSrc(item) {
-  $('#my_image').attr('src', item);
+function changeSrc(item, src) {
+  $(item).attr('src', src);
 }

@@ -46,13 +46,31 @@ function startGame() {
   drawBoard();
   player = new Player();
   player.displayPlayer();
-  drawLadders();
 }
 
 // roll dice function
 function rollDice() {
   const num = Math.floor(Math.random() * 6) + 1;
-  console.log('You diced a ' + num);
+  switch (num) {
+    case 1:
+      changeText('#roll-text', 'You diced a ' + num + ". <br><br> Damn, better slow down on that kush man");
+      break;
+    case 2:
+      changeText('#roll-text', 'You diced a ' + num + ". <br><br> Tough");
+      break;
+    case 3:
+      changeText('#roll-text', 'You diced a ' + num + ". <br><br> You are getting there man!");
+      break;
+    case 4:
+      changeText('#roll-text', 'You diced a ' + num + ". <br><br> Well played!");
+      break;
+    case 5:
+      changeText('#roll-text', 'You diced a ' + num + ". <br><br> Slow down cowboy");
+      break;
+    case 6:
+      changeText('#roll-text', 'You diced a ' + num + ". <br><br> Damn son, you are on fire!");
+      break;
+  }
   numberOfThrows += 1;
   const k = player.spot;
   console.log(k);
@@ -77,6 +95,7 @@ window.onload = function () {
     startGame();
     $('#roll-button').toggleClass('hide');
     $(this).remove();
+    changeSrc('#my_image', '../Main/images/default-event-img.jpg');
   };
 
   document.getElementById('roll-button').onclick = function () {

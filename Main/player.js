@@ -30,7 +30,7 @@ Player.prototype.trigger = function () {
   for (let i = 0; i < events.length; i += 1) {  
     if (tiles[this.spot].index === events[i].index) {
       changeText('#event-text', events[i].text);
-      changeSrc(events[i].img)
+      changeSrc('#my_image', events[i].img)
       this.spot += events[i].event;
     }
   }
