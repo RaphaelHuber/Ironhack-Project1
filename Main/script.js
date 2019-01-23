@@ -42,6 +42,7 @@ function drawBoard() {
 
 // start game function
 function startGame() {
+  $('#main').toggleClass('body');
   drawBoard();
   player = new Player();
   player.displayPlayer();

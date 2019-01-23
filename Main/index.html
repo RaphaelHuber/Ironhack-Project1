@@ -11,18 +11,17 @@
   <style>
   </style>
 </head>
-<body id="container1">
-  <div class="game-intro container2">
-    <input type="button" id="start-button" class="btn btn-primary btn-lg" value="Start Button"> <!-- start button-->
-    <div id="event-text"> <!-- text -->
-  
+<body id="main" class="container1 body"> 
+  <div class="container2"> <!-- Canvas and start btn -->
+    <div id="game-board">
+      <canvas id="my-canvas" width="800" height="500"></canvas>
     </div>
-    <div> <!-- image -->
-      <img id="my_image" src="../Main/images/default-event-img.jpg" width="350" height="200"/>
-    </div>
+    <input type="button" id="start-button" class="btn btn-primary btn-lg" value="Play">
   </div>
-  <div id="game-board">
-    <canvas id="my-canvas" width="800" height="500"></canvas>
+  <div class="game-intro container2">  <!-- Event text and image -->
+    <img id="my_image" src="" alt="" width="350" height="200"/>
+    <div id="event-text"> <!-- text -->
+    </div>
   </div>
 </body>
 <script type="text/javascript" src="board.js"></script>

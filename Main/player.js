@@ -17,7 +17,7 @@ Player.prototype.move = function (num) {
 // display player
 Player.prototype.displayPlayer = function () {
   ctx.beginPath();
-  ctx.fillStyle = '#F38630';
+  ctx.fillStyle = '#AA4048';
   ctx.arc(tiles[this.spot].x + (resolution / 2), tiles[this.spot].y + (resolution / 2), 10, 0, 2 * Math.PI);
   ctx.fill();
   ctx.strokeStyle = 'white';

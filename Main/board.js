@@ -21,9 +21,9 @@ function Tile(x, y, resolution, index) {
   this.resolution = resolution;
   this.index = index;
   if (this.index % 2 === 0) {
-    this.colour = '#5BB531';
+    this.colour = '#E8A87C';
   } else {
-    this.colour = '#00923F';
+    this.colour = '#C38D9D';
   }
 }
 

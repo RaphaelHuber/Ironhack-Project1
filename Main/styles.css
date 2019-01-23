@@ -1,25 +1,25 @@
-* {
-  background-color: blanchedalmond;
-}
-
 canvas {
   padding-left: 0;
   padding-right: 0;
-  margin: 80px 0 100px 100px;
+  margin: 80px 0 0 80px;
   border-radius: 1%;
-  border: 1px solid black;
+}
+
+.body {
+  background-image: url(../Main/images/background-img.jpg);
+  background-size: 1440px 725px;
 }
 
 #start-button {
   width: 200px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 40px auto;
 }
 
 .container1 {
   display: flex;
   flex-direction: row;
+  background-color: #86CDCA;
 } 
 .container2 {
   display: flex;
@@ -27,18 +27,11 @@ canvas {
 }
 
 .game-intro {
-  position: absolute;
-  top: 86px;
-  right: 100px;
+  margin: 80px auto;
 }
 
 #event-text {
- width: 400px;
- padding: 50px 0;
- display: block;
- margin-left: auto;
- margin-right: auto;
- text-align: center;
+ padding: 30px 20px;
 }
 
 img {
