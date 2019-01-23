@@ -10,10 +10,21 @@ canvas {
   background-size: 1440px 725px;
 }
 
-#start-button {
+#roll-button {
   width: 200px;
   display: block;
   margin: 40px auto;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#start-button {
+  width: 150px;
+  position: absolute;
+  top: 50px;
+  left: 645px;
 }
 
 .container1 {

@@ -9,7 +9,7 @@ Player.prototype.move = function (num) {
     alert('You have made it');
     this.spot = 0;
   } else {
-    this.spot += num;
+    this.spot += 1;
   }
   console.log('Move to ' + this.spot);
 };

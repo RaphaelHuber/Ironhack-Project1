@@ -1,6 +1,6 @@
 // function to toggle the button
-function toggleBtn() {
-  document.getElementById('start-button').value = 'Roll them dice';
+function toggleBtn(item) {
+  $(item).toggle();
 }
 
 function changeText(item, text) {

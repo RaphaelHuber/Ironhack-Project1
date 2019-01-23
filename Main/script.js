@@ -53,25 +53,32 @@ function rollDice() {
   const num = Math.floor(Math.random() * 6) + 1;
   console.log('You diced a ' + num);
   numberOfThrows += 1;
-  console.log(numberOfThrows);
-  player.move(num);
-  player.displayPlayer();
-  player.trigger();
-  clearCanvas();
-  drawBoard();
-  player.displayPlayer();
+  const k = player.spot;
+  console.log(k);
+  const int = setInterval(function () {
+    player.move(num);
+    drawBoard();
+    player.displayPlayer();
+    if (player.spot === k + num) {
+      player.trigger();
+      clearCanvas();
+      drawBoard();
+      player.displayPlayer();
+      clearInterval(int);
+    }
+  }, 500);
+  console.log(num);
 }
 
-// OnClick triggering the beginning of the game
+// OnClick triggering the beginning of the game and roll
 window.onload = function () {
   document.getElementById('start-button').onclick = function () {
-    timesClicked += 1;
-    if (timesClicked <= 1) {
-      startGame();
-      toggleBtn();
-    }
-    if (timesClicked > 1) {
-      setTimeout(rollDice, 200);
-    }
+    startGame();
+    $('#roll-button').toggleClass('hide');
+    $(this).remove();
+  };
+
+  document.getElementById('roll-button').onclick = function () {
+    rollDice();
   };
 };
