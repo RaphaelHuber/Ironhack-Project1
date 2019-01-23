@@ -2,7 +2,7 @@
 const events = [
   { name: 'cheetah-smoking', text: '\u201CThis is either a really smart move or by far the stupidest thing that we have ever tried.\u201D Harold\r\n\r\n\u201CWell, we\u2019re about to find out. Mush!!\u201D Kumar', event: 24, img: '../Main/images/event-images/cheetah-smoking.png', colour: 'red', index: 1 },
   { name: 'hang glider', text: '\u201CHey, Roldy, there\u2019s something i forgot to tell you. I\u2019ve never hang-glided before.\u201D Kumar\r\n\r\n\u201CWhat?!\u201D Harold', event: 19, img: '../Main/images/event-images/hang-glider.png', colour: 'blue', index: 3 },
-  { name: 'water splash', text: '\u201CTake that!\u201D Life', event: -4, img: '../Main/images/event-images/water-splash.png', colour: 'blue', index: 6 },
+  { name: 'water splash', text: 'Nothing personal', event: -4, img: '../Main/images/event-images/water-splash.png', colour: 'blue', index: 6 },
   { name: 'get out of jail', text: '\u201COh, yes! Sweet! I was hoping it would be one of these big ring of keys\u201D Kumar\r\n\r\n\u201CKumar, hurry the fuck up.\u201D Harold\r\n\r\n\u201CAll right, yeah\u201D Kumar', event: 8, img: '../Main/images/event-images/get-out-of-jail.png', colour: 'white', index: 9 },
   { name: 'relax-at-home', text: '\u201CWe\u2019re so high right now.\u201D Harold\r\n\r\n\u201CWe\u2019re not low.\u201D Kumar\r\n', event: 4, img: '../Main/images/event-images/relax-at-home.png', colour: 'green', index: 14 },
   { name: 'uni-cop', text: '\u201CI just wanna talk!\u201D University Cop', event: -16, img: '../Main/images/event-images/uni-cop.png', colour: 'grey', index: 20 },
@@ -27,14 +27,6 @@ function Tile(x, y, resolution, index) {
   }
 }
 
-// possibility to make the colour dependent from colour in events
-// for (let i = 0; i < events.length; i += 1) {  
-//   if (this.index === events[i].index) {
-//     this.colour = events[i].colour;
-//   } else {
-//     this.colour = 'yellow';
-//   }
-
 Tile.prototype.show = function () {
   ctx.fillStyle = this.colour;
   ctx.fillRect(this.x, this.y, this.resolution, this.resolution);
@@ -47,5 +39,3 @@ Tile.prototype.drawIndex = function () {
   ctx.fillStyle = 'black';
   ctx.fillText(this.index, this.x + this.resolution / 6, this.y + this.resolution / 6);
 };
-
-// possible thing, make font size related to resolution (resolution/5 e.g.)

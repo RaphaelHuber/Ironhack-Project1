@@ -46,6 +46,7 @@ function startGame() {
   drawBoard();
   player = new Player();
   player.displayPlayer();
+  drawLadders();
 }
 
 // roll dice function
