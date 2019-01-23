@@ -72,20 +72,7 @@ function rollDice() {
       break;
   }
   numberOfThrows += 1;
-  const k = player.spot;
-  console.log(k);
-  const int = setInterval(function () {
-    player.move(num);
-    drawBoard();
-    player.displayPlayer();
-    if (player.spot === k + num) {
-      player.trigger();
-      clearCanvas();
-      drawBoard();
-      player.displayPlayer();
-      clearInterval(int);
-    }
-  }, 500);
+  player.animation(num);
   console.log(num);
 }
 

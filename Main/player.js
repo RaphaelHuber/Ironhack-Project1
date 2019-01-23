@@ -8,8 +8,10 @@ Player.prototype.move = function (num) {
   if (this.spot + num > columns * rows) {
     alert('You have made it');
     this.spot = 0;
-  } else {
+  } else if (num > 0) {
     this.spot += 1;
+  } else if (num < 0) {
+    this.spot -= 1;
   }
   console.log('Move to ' + this.spot);
 };
@@ -31,7 +33,21 @@ Player.prototype.trigger = function () {
     if (tiles[this.spot].index === events[i].index) {
       changeText('#event-text', events[i].text);
       changeSrc('#my_image', events[i].img)
-      this.spot += events[i].event;
+      this.animation(events[i].event);
     }
   }
 };
+
+Player.prototype.animation = function(num) {
+  const k = this.spot;
+  const int = setInterval(function () {
+    player.move(num);
+    drawBoard();
+    player.displayPlayer();
+    console.log(player.spot)
+    if (player.spot === k + num) {
+      player.trigger();
+      clearInterval(int);
+    }
+  }, 500);
+}
