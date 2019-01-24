@@ -5,7 +5,7 @@ function Player() {
 
 // player move function
 Player.prototype.move = function (num) {
-  if (this.spot + num > columns * rows) {
+  if (player.spot + num > columns * rows) {
     alert('You have made it');
     this.spot = 0;
   } else if (num > 0) {
@@ -13,6 +13,7 @@ Player.prototype.move = function (num) {
   } else if (num < 0) {
     this.spot -= 1;
   }
+  console.log(this.spot);
 };
 
 // display player
@@ -32,7 +33,7 @@ Player.prototype.trigger = function () {
     if (tiles[this.spot].index === events[i].index) {
       changeText('#event-text', events[i].text);
       changeSrc('#my_image', events[i].img)
-      this.animation(events[i].event, false);
+      $('#event-button').toggleClass('hide');
     }
   }
 };
@@ -45,7 +46,8 @@ Player.prototype.animation = function (num, triggerOnce = true) {
     player.displayPlayer();
     if (player.spot === k + num) {
       if (triggerOnce) {
-        // here you need to show the button that will trigger the trigger
+        // $('#event-button').toggleClass('hide');
+      //   // here you need to show the button that will trigger the trigger
         player.trigger();
       }
       clearInterval(int);

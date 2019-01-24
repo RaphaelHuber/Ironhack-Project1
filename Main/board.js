@@ -4,7 +4,7 @@ const events = [
 
   { name: 'Chilling with your friends', text: 'You are chilling with your friends. Relax, enjoy their company and STAY where you are.', event: 0, img: '', colour: 'red', index: 2 },
 
-  { name: 'Hang glider', text: 'You found a hang glider! Apart from a couple of bruises, both physically and mentally you actually managed to land safely. Move UP to tile 22!', event: 19, img: '../Main/images/event-images/hang-glider.png', colour: 'blue', index: 3 },
+  { name: 'Hang glider', text: 'You found a hang glider! Apart from a couple of bruises, both physically and mentally, you actually managed to get much closer to white castle. Move UP to tile 22!', event: 19, img: '../Main/images/event-images/hang-glider.png', colour: 'blue', index: 3 },
 
   { name: 'Overslept for work', text: 'Shit, you overslept for work again! Go BACK TWO', event: -2, img: '', colour: 'red', index: 4 },
 
@@ -16,7 +16,7 @@ const events = [
 
   { name: 'Wrong fast food chain', text: 'Well done, you arrived...... at the wrong fast food chain. You decide to go BACK ONE to avoid falling into any temptation.', event: -1, img: '', colour: 'red', index: 8 },
 
-  { name: 'Get out of jail', text: 'You are lucky enough to have a good (an possibly insane) friend to breake into the police station to get you out. This glorious move make you move FORWARD EIGHT tiles.', event: 8, img: '../Main/images/event-images/get-out-of-jail.png', colour: 'white', index: 9 },
+  { name: 'Get out of jail', text: 'You are lucky enough to have a good (an possibly insane) friend to break into the police station to get you out. This glorious move make you move FORWARD EIGHT tiles.', event: 8, img: '../Main/images/event-images/get-out-of-jail.png', colour: 'white', index: 9 },
 
   { name: 'Got a date', text: 'You got that date with your beautiful neighbour you wanted. Game recognizes game and it\'s smilling at you my friend. Please feel free to move that sexy ass UP THREE TILES', event: 3, img: '', colour: 'red', index: 10 },
 
@@ -30,7 +30,7 @@ const events = [
 
   { name: 'Pulled over by cops', text: 'You got pulled over by the cops, you were driving 10 in a 60 zone. Go BACK FOUR', event: -4, img: '', colour: 'red', index: 15 },
 
-  { name: 'Late for the interview', text: 'You totally forgot that you had an interview today, take the pain and go BACK TWO.', event: 2, img: '', colour: 'red', index: 16 },
+  { name: 'Late for the interview', text: 'You totally forgot that you had an interview today, take the pain and go BACK TWO.', event: -2, img: '', colour: 'red', index: 16 },
 
   { name: 'Got a date', text: 'You got that date with your beautiful neighbour you wanted. Game recognizes game and it\'s smilling at you my friend. Please feel free to move that sexy ass UP THREE TILES', event: 3, img: '', colour: 'red', index: 17 },
 
@@ -70,7 +70,7 @@ const events = [
 
   { name: 'Jail', text: 'You fot f***** by the long d*** of the law. Sit in jail and go BACK TO TILE TEN', event: -25, img: '../Main/images/event-images/jail.png', colour: 'olive', index: 35 },
 
-  { name: 'Late for the interview', text: 'You totally forgot that you had an interview today, go BACK TWO.', event: 2, img: '', colour: 'red', index: 36 },
+  { name: 'Late for the interview', text: 'You totally forgot that you had an interview today, go BACK TWO.', event: -2, img: '', colour: 'red', index: 36 },
 
   { name: 'Wrong fast-food chain', text: 'Well done, you arrived... at the wrong fast food chain. You decide to go BACK ONE to avoid falling into any temptation.', event: -1, img: '', colour: 'red', index: 37 },
 

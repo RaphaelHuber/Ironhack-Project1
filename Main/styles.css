@@ -16,6 +16,10 @@ canvas {
   margin: 50px 380px;
 }
 
+#event-button {
+  width: 150px;
+}
+
 .hide {
   visibility: hidden;
 }
