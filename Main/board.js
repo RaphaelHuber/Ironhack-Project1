@@ -1,30 +1,30 @@
 // Tile events
 const events = [
-  { name: 'Smoking with a cheetah', text: 'You manage to convince a cheetah to blaze up with you, you are officially a badass!', event: 24, img: '../Main/images/event-images/cheetah-smoking.png', colour: 'red', index: 1 },
+  { name: 'Smoking with a cheetah', text: 'You manage to convince a cheetah to blaze up with you, you are officially a badass! always remember, 50% fo the time it works all the time! Move UP to tile 25!', event: 24, img: '../Main/images/event-images/cheetah-smoking.png', colour: 'red', index: 1 },
 
-  { name: 'Chilling with some friends', text: 'You are chilling with your friends. Relax and STAY where you are.', event: 0, img: '', colour: 'red', index: 2 },
+  { name: 'Chilling with your friends', text: 'You are chilling with your friends. Relax, enjoy their company and STAY where you are.', event: 0, img: '', colour: 'red', index: 2 },
 
-  { name: 'hang glider', text: '\u201CHey, Roldy, there\u2019s something i forgot to tell you. I\u2019ve never hang-glided before.\u201D Kumar', event: 19, img: '../Main/images/event-images/hang-glider.png', colour: 'blue', index: 3 },
+  { name: 'Hang glider', text: 'You found a hang glider! Apart from a couple of bruises, both physically and mentally you actually managed to land safely. Move UP to tile 22!', event: 19, img: '../Main/images/event-images/hang-glider.png', colour: 'blue', index: 3 },
 
   { name: 'Overslept for work', text: 'Shit, you overslept for work again! Go BACK TWO', event: -2, img: '', colour: 'red', index: 4 },
 
-  { name: 'Arrived at the party', text: 'You made it to the party, enjoy the booze and various illicit substances and move TWO FORWARD', event: 2, img: '', colour: 'red', index: 5 },
+  { name: 'Arrived at the party', text: 'You made it to the party, enjoy the booze, the endless see of illicit substances and STDs. Move TWO FORWARD', event: 2, img: '', colour: 'red', index: 5 },
 
-  { name: 'water splash', text: 'Shit happens', event: -4, img: '../Main/images/event-images/water-splash.png', colour: 'blue', index: 6 },
+  { name: 'Wait what?!', text: 'Drugs afect the memory span they say, you shoudn\'t mix alcohol and weed they say... You wake up in a park hugging a tree. Your taxi home will cost you, move FOUR tiles back.', event: -4, img: '../Main/images/event-images/water-splash.png', colour: 'blue', index: 6 },
 
-  { name: 'Late for the interview', text: 'You totally forgot that you had an interview today, go BACK TWO.', event: 2, img: '', colour: 'red', index: 7 },
+  { name: 'Late for the interview', text: 'You totally forgot that you had an interview today, go BACK TWO.', event: -2, img: '', colour: 'red', index: 7 },
 
-  { name: 'Wrong fast-food chain', text: 'Well done, you arrived... at the wrong fast food chain. You decide to go BACK ONE to avoid falling into any temptation.', event: 4, img: '', colour: 'red', index: 8 },
+  { name: 'Wrong fast food chain', text: 'Well done, you arrived...... at the wrong fast food chain. You decide to go BACK ONE to avoid falling into any temptation.', event: -1, img: '', colour: 'red', index: 8 },
 
-  { name: 'get out of jail', text: '\u201COh, yes! Sweet! I was hoping it would be one of these big ring of keys\u201D Kumar\r\n\r\n\u201CKumar, hurry the fuck up.\u201D Harold\r\n\r\n\u201CAll right, yeah\u201D Kumar', event: 8, img: '../Main/images/event-images/get-out-of-jail.png', colour: 'white', index: 9 },
+  { name: 'Get out of jail', text: 'You are lucky enough to have a good (an possibly insane) friend to breake into the police station to get you out. This glorious move make you move FORWARD EIGHT tiles.', event: 8, img: '../Main/images/event-images/get-out-of-jail.png', colour: 'white', index: 9 },
 
-  { name: 'Got a date', text: 'You got a date with the beautiful/handsome woman/man next door. Please feel free to move THREE FORWARD', event: 3, img: '', colour: 'red', index: 10 },
+  { name: 'Got a date', text: 'You got that date with your beautiful neighbour you wanted. Game recognizes game and it\'s smilling at you my friend. Please feel free to move that sexy ass UP THREE tiles', event: 3, img: '', colour: 'red', index: 10 },
 
-  { name: 'Chilling at home', text: 'You decided to take a day off and watch a movie at home. STAY where you are.', event: 0, img: '', colour: 'red', index: 11 },
+  { name: 'Chilling at home', text: 'You decided to take a day off and watch a movie at home. STAY where you are and enjoy the show.', event: 0, img: '', colour: 'red', index: 11 },
 
   { name: 'Lost the weed', text: 'You forgot again where you stached your weed. Go BACK THREE', event: -3, img: '', colour: 'red', index: 12 },
 
-  { name: 'Chilling with some friends', text: 'You are chilling with your friends. Relax and STAY where you are.', event: 0, img: '', colour: 'red', index: 13 },
+  { name: 'Chilling with your friends', text: 'You are chilling with your friends. Relax, enjoy their company and STAY where you are.', event: 0, img: '', colour: 'red', index: 13 },
 
   { name: 'relax-at-home', text: '\u201CWe\u2019re so high right now.\u201D Harold\r\n\r\n\u201CWe\u2019re not low.\u201D Kumar\r\n', event: 4, img: '../Main/images/event-images/relax-at-home.png', colour: 'green', index: 14 },
 
@@ -34,11 +34,11 @@ const events = [
 
   { name: 'Got a date', text: 'You got a date with the beautiful/handsome woman/man next door. Please feel free to move THREE FORWARD', event: 3, img: '', colour: 'red', index: 17 },
 
-  { name: 'Chilling at home', text: 'You decided to take a day off and watch a movie at home. STAY where you are.', event: 0, img: '', colour: 'red', index: 18 },
+  { name: 'Chilling at home', text: 'You decided to take a day off and watch a movie at home. STAY where you are and enjoy the show.', event: 0, img: '', colour: 'red', index: 18 },
 
   { name: 'Arrived at the party', text: 'You made it to the party, enjoy the booze and various illicit substances and move TWO FORWARD', event: 2, img: '', colour: 'red', index: 19 },
 
-  { name: 'uni-cop', text: '\u201CI just wanna talk!\u201D University Cop', event: -16, img: '../Main/images/event-images/uni-cop.png', colour: 'grey', index: 20 },
+  { name: 'You got caught by some university cop and had to hide in the womans bathroom until the cops arrest someone else. You loose precious time to get to the white castle, go BACK SIX tiles', text: 'No comment.', event: -6, img: '../Main/images/event-images/uni-cop.png', colour: 'grey', index: 20 },
 
   { name: 'Lost the weed', text: 'You forgot again where you stached your weed. Go BACK THREE', event: -3, img: '', colour: 'red', index: 21 },
 
@@ -52,13 +52,13 @@ const events = [
 
   { name: 'spare-tire', text: '\u201CWhere is my spare tire?\u201D Harold\r\n\r\n\u201CI don\u2019t know\u201D Kumar\r\n\r\n\u201CWhere the hell is my spare tire?\u201D Harold\r\n\r\n\u201COh, yeah! Dude, remember that time we got really stoned and strated throwing shit off that bridge to see if it would float?\u201D Kumar\r\n\r\n\u201CWhat bridge? I don\u2019t remem.. What are you talking about?\u201D Harold\r\n\r\n\u201COh, shit, that\u2019s right. That was with Goldstein\u201D Kumar', event: -18, img: '../Main/images/event-images/spare-tire.png', colour: 'navy', index: 26 },
 
-  { name: 'Chilling at home', text: 'You decided to take a day off and watch a movie at home. STAY where you are.', event: 0, img: '', colour: 'red', index: 27 },
+  { name: 'Chilling at home', text: 'You decided to take a day off and watch a movie at home. STAY where you are and enjoy the show.', event: 0, img: '', colour: 'red', index: 27 },
 
   { name: 'Arrived at the party', text: 'You made it to the party, enjoy the booze and various illicit substances and move TWO FORWARD', event: 2, img: '', colour: 'red', index: 28 },
 
   { name: 'kush', text: '\u201CHey, what\u2019s that smell?\u201D Kumar\r\n\r\n\u201CWhat smell?\u201D Harold', event: 8, img: '../Main/images/event-images/kush.png', colour: 'silver', index: 29 },
 
-  { name: 'Chilling with some friends', text: 'You are chilling with your friends. Relax and STAY where you are.', event: 0, img: '', colour: 'red', index: 30 },
+  { name: 'Chilling with your friends', text: 'You are chilling with your friends. Relax, enjoy their company and STAY where you are.', event: 0, img: '', colour: 'red', index: 30 },
 
   { name: 'Got a date', text: 'You got a date with the beautiful/handsome woman/man next door. Please feel free to move THREE FORWARD', event: 3, img: '', colour: 'red', index: 31 },
 
@@ -66,7 +66,7 @@ const events = [
 
   { name: 'Overslept for work', text: 'Shit, you overslept for work again! Go BACK TWO', event: -2, img: '', colour: 'red', index: 33 },
 
-  { name: 'Chilling at home', text: 'You decided to take a day off and watch a movie at home. STAY where you are.', event: 0, img: '', colour: 'red', index: 34 },
+  { name: 'Chilling at home', text: 'You decided to take a day off and watch a movie at home. STAY where you are and enjoy the show.', event: 0, img: '', colour: 'red', index: 34 },
 
   { name: 'jail', text: '\u201COh, shit.\u201D Harold', event: -25, img: '../Main/images/event-images/jail.png', colour: 'olive', index: 35 },
 
