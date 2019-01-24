@@ -71,6 +71,7 @@ window.onload = function () {
 
   document.getElementById('event-button').onclick = function () {
     $('#event-button').toggleClass('hide');
+    $('#roll-button').toggleClass('hide');
     player.animation(events[player.spot - 1].event, false);
   }
 };

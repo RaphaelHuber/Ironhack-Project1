@@ -34,6 +34,7 @@ Player.prototype.trigger = function () {
       changeText('#event-text', events[i].text);
       changeSrc('#my_image', events[i].img)
       $('#event-button').toggleClass('hide');
+      $('#roll-button').toggleClass('hide');
     }
   }
 };
