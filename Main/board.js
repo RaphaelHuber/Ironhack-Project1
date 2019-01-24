@@ -2,13 +2,13 @@
 const events = [
   { name: 'Smoking with a cheetah', text: 'You manage to convince a cheetah to blaze up with you. <br> 50% fo the time it works all the time! <br> <br> Move all the way UP TO TILE 25!', event: 24, img: '../Main/images/event-images/cheetah-smoking.png', colour: 'red', index: 1 },
 
-  { name: 'Chilling with your friends', text: 'You are chilling with your friends. <br> Relax, enjoy their company and STAY where you are.', event: 0, img: '../Main/images/event-images/watch-movie-with-friends.jpg', colour: 'red', index: 2 },
+  { name: 'Chilling with your friends', text: 'You are chilling with your friends. <br> <br> Relax, enjoy their company and STAY where you are.', event: 0, img: '../Main/images/event-images/watch-movie-with-friends.jpg', colour: 'red', index: 2 },
 
   { name: 'Hang glider', text: 'You found a hang glider! You miraculously make it quite far before crashing into a tree. <br> <br> Make it all the way UP TO TILE 22!', event: 19, img: '../Main/images/event-images/hang-glider.png', colour: 'blue', index: 3 },
 
   { name: 'Overslept for work', text: 'Shit, you overslept for work again! <br> <br> Go BACK TWO', event: -2, img: '../Main/images/event-images/overslept-for-work.jpg', colour: 'red', index: 4 },
 
-  { name: 'Arrived at the party', text: 'You made it to the block party!! <br> Enjoy the booze, the endless see of illicit substances and the STDs. <br> <br> Move TWO FORWARD', event: 2, img: '../Main/images/event-images/arrived-at-the-party.jpg', colour: 'red', index: 5 },
+  { name: 'Block party', text: 'You made it to the block party!! <br> Enjoy the booze, the endless see of illicit substances and STDs. <br> <br> Move TWO FORWARD', event: 2, img: '../Main/images/event-images/arrived-at-the-party.jpg', colour: 'red', index: 5 },
 
   { name: 'Wait what?!', text: 'Drugs affect the memory span they say... You wake up in a park hugging a tree. <br> <br> Your taxi home will cost you, move FOUR tiles back.', event: -4, img: '../Main/images/event-images/wait-what.jpg', colour: 'blue', index: 6 },
 
@@ -18,7 +18,7 @@ const events = [
 
   { name: 'Get out of jail', text: 'You are lucky enough to have a good (an possibly insane) friend to break youout of prison. <br> <br> This glorious move makes you move FORWARD EIGHT tiles.', event: 8, img: '../Main/images/event-images/get-out-of-jail.png', colour: 'white', index: 9 },
 
-  { name: 'Got a date', text: 'You got that date you wanted so bad. <br> Game recognizes game and it\'s smilling at you my friend. <br> <br> Please feel free to move that sexy ass UP THREE TILES', event: 3, img: '../Main/images/event-images/got-a-date.jpg', colour: 'red', index: 10 },
+  { name: 'Got a date', text: 'You got that date you wanted so bad. <br> <br> Game recognizes game and it\'s smilling at you my friend. <br> <br> Please feel free to move your sexy ass UP THREE TILES', event: 3, img: '../Main/images/event-images/got-a-date.jpg', colour: 'red', index: 10 },
 
   { name: 'Chilling at home', text: 'You decide to take a day off and watch a movie at home. <br> <br> STAY where you are.', event: 0, img: '../Main/images/event-images/chilling-at-home.jpg', colour: 'red', index: 11 },
 
@@ -28,23 +28,23 @@ const events = [
 
   { name: 'Friday night', text: 'It\'s friday night and your best friend invited you to come over and blaze up. What an epic night! <br> <br> Move FOUR TILES FORWARD', event: 4, img: '../Main/images/default-event-img.jpg', colour: 'green', index: 14 },
 
-  { name: 'Pulled over by cops', text: 'You got pulled over by the cops. You were driving 10 in a 60 zone... <br> <br> Go BACK FOUR', event: -4, img: '../Main/images/event-images/', colour: 'red', index: 15 },
+  { name: 'Pulled over by cops', text: 'You got pulled over by the cops. You were driving 10 in a 60 zone... <br> <br> Go BACK FOUR', event: -4, img: '../Main/images/event-images/got-pulled-over-by-police.jpg', colour: 'red', index: 15 },
 
   { name: 'Late for the interview', text: 'You totally forgot about the interview you were supposed to go this morning. <br> <br> Go BACK TWO.', event: -2, img: '../Main/images/event-images/late-for-interview.jpg', colour: 'red', index: 16 },
 
-  { name: 'Got a date', text: 'You got that date you wanted so bad. <br> Game recognizes game and it\'s smilling at you my friend. <br> <br> Please feel free to move that sexy ass UP THREE TILES', event: 3, img: '../Main/images/event-images/got-a-date.jpg', colour: 'red', index: 17 },
+  { name: 'Got a date', text: 'You got that date you wanted so bad. <br> <br> Game recognizes game and it\'s smilling at you my friend. <br> <br> Please feel free to move your sexy ass UP THREE TILES', event: 3, img: '../Main/images/event-images/got-a-date.jpg', colour: 'red', index: 17 },
 
   { name: 'Chilling at home', text: 'You decide to take a day off and watch a movie at home. <br> <br> STAY where you are.', event: 0, img: '../Main/images/event-images/chilling-at-home.jpg', colour: 'red', index: 18 },
 
-  { name: 'You made it to the block party!! <br> Enjoy the booze, the endless see of illicit substances and the STDs. <br> <br> Move TWO FORWARD', event: 2, img: '../Main/images/event-images/arrived-at-the-party.jpg', colour: 'red', index: 19 },
+  { name: 'Block party', text: 'You made it to the block party!! <br> Enjoy the booze, the endless see of illicit substances and STDs. <br> <br> Move TWO FORWARD', event: 2, img: '../Main/images/event-images/arrived-at-the-party.jpg', colour: 'red', index: 19 },
 
-  { name: 'Got cought at uni', text: 'You got caught smoking up by some university cop and had to hide in the womans bathroom. <br> <br> Go BACK SIX tiles', event: -6, img: '../Main/images/event-images/got-caught-at-uni.png.png', colour: 'grey', index: 20 },
+  { name: 'Got caught at uni', text: 'You got caught smoking up by some university cop and had to hide in the womans bathroom. <br> <br> Go BACK SIX tiles', event: -6, img: '../Main/images/event-images/got-caught-at-uni.png', colour: 'grey', index: 20 },
 
   { name: 'Lost the weed', text: 'You forgot again where you stached your weed. <br> <br> Go BACK THREE', event: -3, img: '../Main/images/event-images/lost-the-weed.jpg', colour: 'red', index: 21 },
 
   { name: 'Wrong fast-food chain', text: 'Well done, you arrived at..... the wrong fast food chain. <br> <br> You decide to go BACK ONE to avoid falling into any temptation.', event: -1, img: '../Main/images/event-images/wrong-fast-food.png', colour: 'red', index: 22 },
 
-  { name: 'Raccon', text: 'Oh, shit! How the fuck that did that get in here? A racoon bit your friend and you have to make a detour to the nearest hospital to check if he got rabies. <br> <br> Go BACK FIVE tiles.', event: -5, img: '../Main/images/event-images/raccon.png', colour: 'purple', index: 23 },
+  { name: 'Hospital', text: 'Oh, shit! How the fuck that did that get in here? A racoon bit your friend and you have to make a detour to the nearest hospital to check if he got rabies. <br> <br> Go BACK FIVE tiles.', event: -5, img: '../Main/images/event-images/hospital.png', colour: 'purple', index: 23 },
 
   { name: 'Pulled over by cops', text: 'You got pulled over by the cops. You were driving 10 in a 60 zone... <br> <br> Go BACK FOUR', event: -4, img: '../Main/images/event-images/got-pulled-over-by-police.jpg', colour: 'red', index: 24 },
 
@@ -54,13 +54,13 @@ const events = [
 
   { name: 'Chilling at home', text: 'You decide to take a day off and watch a movie at home. <br> <br> STAY where you are.', event: 0, img: '../Main/images/event-images/chilling-at-home.jpg', colour: 'red', index: 27 },
 
-  { name: 'You made it to the block party!! <br> Enjoy the booze, the endless see of illicit substances and the STDs. <br> <br> Move TWO FORWARD', event: 2, img: '../Main/images/event-images/arrived-at-the-party.jpg', colour: 'red', index: 28 },
+  { name: 'Block party', text: 'You made it to the block party!! <br> Enjoy the booze, the endless see of illicit substances and STDs. <br> <br> Move TWO FORWARD', event: 2, img: '../Main/images/event-images/arrived-at-the-party.jpg', colour: 'red', index: 28 },
 
-  { name: 'Jackpot', text: 'While rescuing your friend from prison you also happen to find a huge bag of weed. JACKPOT! Get your friend, your kush and go all the way <br> <br> UP TO TILE THIRTY-SEVEN', event: 8, img: '../Main/images/event-images/kush.png', colour: 'silver', index: 29 },
+  { name: 'Jackpot', text: 'While rescuing your friend from prison you also happen to find a huge bag of weed. JACKPOT! Get your friend, your kush and go all the way <br> <br> TO TILE THIRTY-SEVEN', event: 8, img: '../Main/images/event-images/kush.png', colour: 'silver', index: 29 },
 
   { name: 'Chilling with your friends', text: 'You are chilling with your friends. <br> <br> Relax, enjoy their company and STAY where you are.', event: 0, img: '../Main/images/event-images/watch-movie-with-friends.jpg', colour: 'red', index: 30 },
 
-  { name: 'Got a date', text: 'You got that date you wanted so bad. <br> Game recognizes game and it\'s smilling at you my friend. <br> <br> Please feel free to move that sexy ass UP THREE TILES', event: 3, img: '../Main/images/event-images/got-a-date.jpg', colour: 'red', index: 31 },
+  { name: 'Got a date', text: 'You got that date you wanted so bad. <br> <br> Game recognizes game and it\'s smilling at you my friend. <br> <br> Please feel free to move your sexy ass UP THREE TILES', event: 3, img: '../Main/images/event-images/got-a-date.jpg', colour: 'red', index: 31 },
 
   { name: 'Lost the weed', text: 'You forgot again where you stached your weed. <br> <br> Go BACK THREE', event: -3, img: '../Main/images/event-images/lost-the-weed.jpg', colour: 'red', index: 32 },
 
@@ -74,7 +74,7 @@ const events = [
 
   { name: 'Wrong fast-food chain', text: 'Well done, you arrived at..... the wrong fast food chain. <br> <br> You decide to go BACK ONE to avoid falling into any temptation.', event: -1, img: '../Main/images/event-images/wrong-fast-food.png', colour: 'red', index: 37 },
 
-  { name: 'Special bush', text: 'A casual pee in the woods becomes a scarring experience. Many question are left unanswered and you <br> <br> go BACK EIGHT TILES', event: -8, img: '../Main/images/event-images/special-bush', colour: 'lime', index: 38 },
+  { name: 'Special bush', text: 'A casual pee in the woods becomes a scarring experience with many unanswered question. <br> <br> Go BACK EIGHT TILES', event: -8, img: '../Main/images/event-images/special-bush.png', colour: 'lime', index: 38 },
 
   { name: 'Business hippie', text: 'A business hippie takes advantage of the high demand and sells you some green to an exorbitant price. <br> <br> Go BACK THREE TILES', event: -3, img: '../Main/images/event-images/business-hippie.png', colour: 'lime', index: 39 }
 ];

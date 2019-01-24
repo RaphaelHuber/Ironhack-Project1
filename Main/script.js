@@ -67,12 +67,14 @@ window.onload = function () {
   document.getElementById('roll-button').onclick = function () {
     rollDice();
     changeText('#intro-text', '');
+    changeText('#event-text', '');
+    changeSrc('#my_image', '');
   };
 
   document.getElementById('event-button').onclick = function () {
-    changeText('#roll-text', ' ');
+    changeText('#roll-text', '');
     $('#event-button').toggleClass('hide');
-    $('#roll-button').toggleClass('hide');
+    // $('#roll-button').toggleClass('hide');
     player.animation(events[player.spot - 1].event, false);
   }
 };

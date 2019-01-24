@@ -77,7 +77,7 @@ canvas {
 }
 
 .game-over {
-  background-image: url(../Main/images/game-over.jpg);
+  background-image: url(../Main/images/game-over.png);
   background-size: cover;
   background-repeat: no-repeat;
 }

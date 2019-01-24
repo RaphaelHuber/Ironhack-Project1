@@ -5,8 +5,12 @@ function Player() {
 
 // player move function
 Player.prototype.move = function (num) {
-  if (player.spot + num > columns * rows) {
-    $('#main').toggleClass('game-over');
+  if (player.spot > columns * rows - 2) {
+    $('canvas').addClass('hide');
+    $('#roll-button').addClass('hide');
+    changeText('#roll-text', '')
+    $('#main').addClass('game-over');
+    player.move(0);
     this.spot = 0;
   } else if (num > 0) {
     this.spot += 1;
@@ -33,7 +37,6 @@ Player.prototype.trigger = function () {
       changeText('#event-text', events[i].text);
       changeSrc('#my_image', events[i].img)
       $('#event-button').toggleClass('hide');
-      $('#roll-button').toggleClass('hide');
     }
   }
 };
@@ -45,6 +48,7 @@ Player.prototype.animation = function (num, triggerOnce = true) {
     drawBoard();
     player.displayPlayer();
     if (player.spot === k + num) {
+      $('#roll-button').toggleClass('hide');
       if (triggerOnce) {
         player.trigger();
       }
