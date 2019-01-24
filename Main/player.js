@@ -13,7 +13,6 @@ Player.prototype.move = function (num) {
   } else if (num < 0) {
     this.spot -= 1;
   }
-  console.log('Move to ' + this.spot);
 };
 
 // display player
