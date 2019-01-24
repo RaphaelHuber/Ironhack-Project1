@@ -6,14 +6,13 @@ function Player() {
 // player move function
 Player.prototype.move = function (num) {
   if (player.spot + num > columns * rows) {
-    alert('You have made it');
+    $('#main').toggleClass('game-over');
     this.spot = 0;
   } else if (num > 0) {
     this.spot += 1;
   } else if (num < 0) {
     this.spot -= 1;
   }
-  console.log(this.spot);
 };
 
 // display player
@@ -47,8 +46,6 @@ Player.prototype.animation = function (num, triggerOnce = true) {
     player.displayPlayer();
     if (player.spot === k + num) {
       if (triggerOnce) {
-        // $('#event-button').toggleClass('hide');
-      //   // here you need to show the button that will trigger the trigger
         player.trigger();
       }
       clearInterval(int);

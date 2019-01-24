@@ -51,8 +51,7 @@ function startGame() {
 // roll dice function
 function rollDice() {
   const num = Math.floor(Math.random() * 6) + 1;
-  changeText('#roll-text', 'You diced a ' + num + '.');
-  numberOfThrows += 1;
+  changeText('#roll-text', 'You got a ' + num)
   player.animation(num);
 }
 
@@ -62,14 +61,16 @@ window.onload = function () {
     startGame();
     $('#roll-button').toggleClass('hide');
     $(this).remove();
-    changeSrc('#my_image', '../Main/images/default-event-img.jpg');
-  };
-
+    changeText('#intro-text', intro[0].text);
+  }
+  
   document.getElementById('roll-button').onclick = function () {
     rollDice();
+    changeText('#intro-text', '');
   };
 
   document.getElementById('event-button').onclick = function () {
+    changeText('#roll-text', ' ');
     $('#event-button').toggleClass('hide');
     $('#roll-button').toggleClass('hide');
     player.animation(events[player.spot - 1].event, false);
