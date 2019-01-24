@@ -1,6 +1,6 @@
 // Tile events
 const events = [
-  { name: 'Smoking with a cheetah', text: 'You manage to convince a cheetah to blaze up with you, you are officially a badass! Always remember, 50% fo the time it works all the time! Move all the way UP TO TILE 25!', event: 24, img: '../Main/images/event-images/cheetah-smoking.png', colour: 'red', index: 1 },
+  { name: 'Smoking with a cheetah', text: 'You manage to convince a cheetah to blaze up with you. 50% fo the time it works all the time! Move all the way UP TO TILE 25!', event: 24, img: '../Main/images/event-images/cheetah-smoking.png', colour: 'red', index: 1 },
 
   { name: 'Chilling with your friends', text: 'You are chilling with your friends. Relax, enjoy their company and STAY where you are.', event: 0, img: '', colour: 'red', index: 2 },
 
@@ -10,7 +10,7 @@ const events = [
 
   { name: 'Arrived at the party', text: 'You made it to the party, enjoy the booze, the endless see of illicit substances and STDs. Move TWO FORWARD', event: 2, img: '', colour: 'red', index: 5 },
 
-  { name: 'Wait what?!', text: 'Drugs afect the memory span they say, you shoudn\'t mix alcohol and weed they say... You wake up in a park hugging a tree. Your taxi home will cost you, move FOUR tiles back.', event: -4, img: '../Main/images/event-images/water-splash.png', colour: 'blue', index: 6 },
+  { name: 'Wait what?!', text: 'Drugs afect the memory span they say... You wake up in a park hugging a tree. Your taxi home will cost you, move FOUR tiles back.', event: -4, img: '../Main/images/event-images/water-splash.png', colour: 'blue', index: 6 },
 
   { name: 'Late for the interview', text: 'You totally forgot that you had an interview today, go BACK TWO.', event: -2, img: '', colour: 'red', index: 7 },
 
@@ -28,7 +28,7 @@ const events = [
 
   { name: 'Friday night', text: 'It\'s friday night and your best friend invited you to come over and blaze up. What an epic night it was indeed, move FOUR TILES FORWARD', event: 4, img: '../Main/images/event-images/relax-at-home.png', colour: 'green', index: 14 },
 
-  { name: 'Pulled over by cops', text: 'You got pulled over by the cops, you were driving 10 in a 60 zone. Go BACK FOUR', event: 4, img: '', colour: 'red', index: 15 },
+  { name: 'Pulled over by cops', text: 'You got pulled over by the cops, you were driving 10 in a 60 zone. Go BACK FOUR', event: -4, img: '', colour: 'red', index: 15 },
 
   { name: 'Late for the interview', text: 'You totally forgot that you had an interview today, take the pain and go BACK TWO.', event: 2, img: '', colour: 'red', index: 16 },
 
@@ -46,7 +46,7 @@ const events = [
 
   { name: 'Raccon', text: 'Oh, shit! How the fuck that did that get in here? The racoon bite you and you have to make a detour to the nearest hospital to check if you got rabies. Good news, you are healthy. Bad news, you have to go BACK FIVE tiles.', event: -5, img: '../Main/images/event-images/raccon.png', colour: 'purple', index: 23 },
 
-  { name: 'Pulled over by cops', text: 'You got pulled over by the cops, you were driving 10 in a 60 zone. Go BACK FOUR', event: 4, img: '', colour: 'red', index: 24 },
+  { name: 'Pulled over by cops', text: 'You got pulled over by the cops, you were driving 10 in a 60 zone. Go BACK FOUR', event: -4, img: '', colour: 'red', index: 24 },
 
   { name: 'Overslept for work', text: 'Shit, you overslept for work again! Go BACK TWO', event: -2, img: '', colour: 'red', index: 25 },
 

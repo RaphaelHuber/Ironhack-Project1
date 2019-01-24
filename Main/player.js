@@ -32,20 +32,22 @@ Player.prototype.trigger = function () {
     if (tiles[this.spot].index === events[i].index) {
       changeText('#event-text', events[i].text);
       changeSrc('#my_image', events[i].img)
-      this.animation(events[i].event);
+      this.animation(events[i].event, false);
     }
   }
 };
 
-Player.prototype.animation = function(num) {
+Player.prototype.animation = function (num, triggerOnce = true) {
   const k = this.spot;
   const int = setInterval(function () {
     player.move(num);
     drawBoard();
     player.displayPlayer();
-    console.log(player.spot)
     if (player.spot === k + num) {
-      player.trigger();
+      if (triggerOnce) {
+        // here you need to show the button that will trigger the trigger
+        player.trigger();
+      }
       clearInterval(int);
     }
   }, 500);
