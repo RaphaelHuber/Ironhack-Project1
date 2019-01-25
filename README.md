@@ -21,7 +21,9 @@ The game is not adapted fot the mobile phone yet.
 
 ### Installing
 
-A step by step series of examples that tell you how to get this game running
+You just want to play already? Just click the following link: https://raphaelhuber.github.io/Ironhack-Project1/Main/index
+
+If you prefer having the game content on your computer and play it from there please follow the following steps.
 
 1. Downlaod the zipped Ironhack-Project1-master file
 2. Unzip the file
