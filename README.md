@@ -42,7 +42,7 @@ To start the game you just have to click the "Play" button in the center top of 
 
 ## How to play the game
 
-To play this game you just need your mouse. After you clicked the 'Play' button you will find the game-board and a 'Roll the dice' button. Each turn you will roll the dice by clicking this button. It will display you the amount you diced and will automatically move forward accordingly. Once your character stops on a tile it will display the event of the tile and display its content and what will happen once you confirm by clicking the appearing 'Ok' button under the event text (the event images might take a couple of seconds to charge, sorry for that). These events will either make you go further in front, go back or stay where you are. Your character will only move once you have clicked this 'Ok' button.
+To play this game you just need your mouse. After you clicked the 'Play' button you will find the game-board and a 'Roll the dice' button. Each turn you will roll the dice by clicking this button. It will display you the amount you diced and will automatically move forward accordingly. Once your character stops on a tile it will display the event of the tile and display its content and what will happen once you confirm by clicking the appearing 'Ok' button under the event text (the event images might take a couple of seconds to charge, sorry for that). These events will either make you go further in front, go back or make you stay where you are. Your character will only move once you have clicked this 'Ok' button.
 
 ## Goal of the game
 
@@ -52,13 +52,15 @@ Good luck!
 
 ## For the thursty (and over 18) ones
 
-You can easily change this game to any kind of drinking game. E.g. by relating the number of tiles you might have to go back to sips of pieces of clothing. I am working on adding a multiplayer mode and respective icons (Harold, Kumar, Goldstein and Rosenberg) but for now you will have to play as one team. 
+You can easily change this game to any kind of drinking game. E.g. by relating the number of tiles you might have to go back to a number of sips one might have to take or pieces of clothing that need to be removed. I am working on adding a multiplayer mode and respective icons (Harold, Kumar, Goldstein and Rosenberg) but for now you will have to play as one team. 
 
 ## Technologies used
 
-- JQuery for all the DOM manipulations
-- Canvas for the Game-Board
+- HTML 5 for creating the web page
+- CSS 3 for the style of the HTML document
 - JavaScript for all the logic
+- JQuery for all DOM manipulations
+- Canvas for the Game-Board
 
 ## Author
 
