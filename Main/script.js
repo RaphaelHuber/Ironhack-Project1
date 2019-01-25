@@ -57,24 +57,23 @@ function rollDice() {
 
 // OnClick triggering the beginning of the game and roll
 window.onload = function () {
-  document.getElementById('start-button').onclick = function () {
+  $('#start-button').on('click', function () {
     startGame();
     $('#roll-button').toggleClass('hide');
     $(this).remove();
     changeText('#intro-text', intro[0].text);
-  }
+  });
   
-  document.getElementById('roll-button').onclick = function () {
+  $('#roll-button').on('click', function () {
     rollDice();
     changeText('#intro-text', '');
     changeText('#event-text', '');
     changeSrc('#my_image', '');
-  };
+  });
 
-  document.getElementById('event-button').onclick = function () {
+  $('#event-button').on('click', function () {
     changeText('#roll-text', '');
     $('#event-button').toggleClass('hide');
-    // $('#roll-button').toggleClass('hide');
     player.animation(events[player.spot - 1].event, false);
-  }
+  })
 };
