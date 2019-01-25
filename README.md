@@ -42,8 +42,7 @@ To start the game you just have to click the "Play" button in the center top of 
 
 ## How to play the game
 
-To play this game you just need your mouse. After you clicked the 'Play' button you will find the game-board and a 'Roll the dice' button. Each turn you will roll the dice by clicking this button. It will display you the amount you diced and will automatically move forward accordingly. Once your char
-acter stops on a tile it will display the event of the tile and display its content and what will happen once you confirm by clicking the appearing 'Ok' button under the event text. These events will either make you go further in front, go back or stay where you are. Your character will only move once you have clicked this 'Ok' button.
+To play this game you just need your mouse. After you clicked the 'Play' button you will find the game-board and a 'Roll the dice' button. Each turn you will roll the dice by clicking this button. It will display you the amount you diced and will automatically move forward accordingly. Once your character stops on a tile it will display the event of the tile and display its content and what will happen once you confirm by clicking the appearing 'Ok' button under the event text (the event images might take a couple of seconds to charge, sorry for that). These events will either make you go further in front, go back or stay where you are. Your character will only move once you have clicked this 'Ok' button.
 
 ## Goal of the game
 
