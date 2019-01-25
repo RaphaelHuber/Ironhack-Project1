@@ -54,6 +54,12 @@ Good luck!
 
 You can easily change this game to any kind of drinking game. E.g. by relating the number of tiles you might have to go back to sips of pieces of clothing. I am working on adding a multiplayer mode and respective icons (Harold, Kumar, Goldstein and Rosenberg) but for now you will have to play as one team. 
 
+## Technologies used
+
+- JQuery for all the DOM manipulations
+- Canvas for the Game-Board
+- JavaScript for all the logic
+
 ## Author
 
 * **Raphael Everest Huber**
