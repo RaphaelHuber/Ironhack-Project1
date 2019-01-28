@@ -25,7 +25,7 @@ You just want to play already? Just click the following link: https://raphaelhub
 
 If you prefer having the game content on your computer and play it from there please follow the following steps.
 
-1. Downlaod the zipped Ironhack-Project1-master file
+1. Download the zipped Ironhack-Project1-master file
 2. Unzip the file
 
 ### Opening and starting the game
