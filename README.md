@@ -1,6 +1,6 @@
 # Ironhack Project 1 - Program a game
 
-During our WebDev full-time course at Ironhack São Paulo we have to, as our first project, come up and program a game. I chose to make a game that combines the game-style of snakes & ladders with some unique moments of one of my favorite movie, Harold & Kumar go to white castle. 
+As my first project I chose to make a game that combines the game-style of snakes & ladders with some unique moments of one of my favorite movie, Harold & Kumar go to white castle. 
 
 ## Getting Started
 
